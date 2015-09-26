@@ -1,5 +1,6 @@
-# no-throw [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> Wraps a function and makes it return {err, value} instead of throwing.
+# no-throw
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+> Wraps a function and makes it return {error, value} instead of throwing.
 
 
 ## Install
@@ -12,9 +13,22 @@ $ npm install --save no-throw
 ## Usage
 
 ```js
+'use strict';
+
 var noThrow = require('no-throw');
 
-noThrow('Rainbow');
+var sqrt = function(n) {
+  if (n < 0) {
+    throw new Error('Encountered a complication.');
+  }
+
+  return Math.sqrt(n);
+};
+
+console.log(
+  noThrow(sqrt)( -1), // { error: <Error...>, value: undefined }
+  noThrow(sqrt)(100)  // { error:  undefined, value:        10 }
+);
 ```
 
 ## License
