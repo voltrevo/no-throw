@@ -1,7 +1,7 @@
 {
   "name": "no-throw",
   "version": "0.0.0",
-  "description": "Wraps a function and makes it return {err, value} instead of throwing.",
+  "description": "Wraps a function and makes it return {error, value} instead of throwing.",
   "homepage": "https://github.com/voltrevo/no-throw#readme",
   "repository": "voltrevo/no-throw",
   "author": {
