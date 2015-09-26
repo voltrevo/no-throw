@@ -1,0 +1,36 @@
+{
+  "name": "no-throw",
+  "version": "0.0.0",
+  "description": "Wraps a function and makes it return {err, value} instead of throwing.",
+  "homepage": "https://github.com/voltrevo/no-throw#readme",
+  "repository": "voltrevo/no-throw",
+  "author": {
+    "name": "Andrew Morris",
+    "email": "voltrevo@gmail.com",
+    "url": "http://andrewmorris.io/"
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "keywords": [
+    "no",
+    "throw",
+    "utility"
+  ],
+  "devDependencies": {
+    "gulp": "^3.6.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^0.9.0",
+    "gulp-mocha": "^2.0.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-nsp": "^0.4.5",
+    "gulp-coveralls": "^0.1.0"
+  },
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
+  },
+  "license": "MIT"
+}
